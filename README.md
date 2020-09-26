@@ -3,7 +3,7 @@
 ## Build the image locally
 
 ```
-docker build -t matthewbrett/trusty:32 .
+docker build -t matthewbrett/uobhub:001 .
 ```
 
 ## Google Container Registry
