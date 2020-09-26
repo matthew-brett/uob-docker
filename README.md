@@ -3,7 +3,7 @@
 ## Build the image locally
 
 ```
-docker build -t matthewbrett/uobhub:001 .
+docker build -t matthewbrett/uobhub:v002 .
 ```
 
 ## Google Container Registry
@@ -22,8 +22,8 @@ gcloud auth configure-docker
 Tag and push to GCR:
 
 ```
-docker tag matthewbrett/uobhub:001 gcr.io/uob-jupyterhub/uobhub:001
-docker push gcr.io/uob-jupyterhub/uobhub:001
+docker tag matthewbrett/uobhub:v002 gcr.io/uob-jupyterhub/uobhub:v002
+docker push gcr.io/uob-jupyterhub/uobhub:v002
 ```
 
 ## Dockerhub
