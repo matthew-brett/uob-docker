@@ -10,6 +10,7 @@ if [[ -n $(git status --short) ]]; then
     exit 2
 fi
 
+gcloud auth configure-docker
 tag=$(git rev-parse --short HEAD)
 name=$(basename $PWD)
 user=gcr.io/uob-jupyterhub
