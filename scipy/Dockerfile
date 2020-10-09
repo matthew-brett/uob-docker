@@ -6,3 +6,5 @@ RUN pip install jupytext
 RUN pip install okpy
 
 RUN pip install otter-grader
+
+RUN pip install nbgitpuller
