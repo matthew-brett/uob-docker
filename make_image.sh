@@ -13,7 +13,7 @@ fi
 gcloud auth configure-docker
 tag=$(git rev-parse --short HEAD)
 name=$(basename $(realpath $pth))
-user=gcr.io/uob-jupyterhub
+user=eu.gcr.io/uob-jupyterhub
 img_name="${name}:${tag}"
 full_name="${user}/${img_name}"
 docker build -t ${full_name} ${pth}
