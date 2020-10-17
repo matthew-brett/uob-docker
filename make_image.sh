@@ -10,11 +10,12 @@ if [[ -n $(git status --short) ]]; then
     exit 2
 fi
 
-gcloud auth configure-docker
-tag=$(git rev-parse --short HEAD)
 name=$(basename $(realpath $pth))
+tag=$(git rev-parse --short HEAD)
 user=eu.gcr.io/uob-jupyterhub
 img_name="${name}:${tag}"
 full_name="${user}/${img_name}"
+
+gcloud auth configure-docker
 docker build -t ${full_name} ${pth}
 docker push ${full_name}
