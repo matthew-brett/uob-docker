@@ -187,9 +187,15 @@ ADD ipython_config.py ${IPYTHONDIR}/ipython_config.py
 # install QGrid notebook extension
 RUN jupyter nbextension enable --py --sys-prefix qgrid
 
-# Pip user install
+# Install jupytext
+RUN pip install jupytext
+
+# Ottr grader.
+RUN Rscript -e "devtools::install_github('ucbds-infra/ottr', ref='0.0.1', upgrade_dependencies=FALSE, quiet=FALSE)"
+
+# Path for pip user install
 WORKDIR /home/${NB_USER}
-ENV PATH ${WORKDIR}/.local/bin:$PATH
+ENV PATH /home/${NB_USER}/.local/bin:$PATH
 
 USER ${NB_USER}
 
