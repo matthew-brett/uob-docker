@@ -5,7 +5,7 @@ FROM gcr.io/ucb-datahub-2018/workshop-user-image:3cd7a6b
 RUN pip install jupytext
 
 # Upgrade infra components
-COPY ../infra-requirements.txt /tmp/infra-requirements.txt
+COPY infra-requirements.txt /tmp/infra-requirements.txt
 RUN pip install --no-cache -r /tmp/infra-requirements.txt
 
 # Ottr grader.
